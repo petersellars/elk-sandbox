@@ -5,3 +5,7 @@ This repository uses [Terraform](https://www.terraform.io) to provision AWS infr
 ```
 docker pull hashicorp/terraform:light
 ```
+To run the container mount the current directory in the container and pass the container mount to the terraform command:
+```
+docker run --rm  -v $PWD:/data hashicorp/terraform:light plan /data
+```
